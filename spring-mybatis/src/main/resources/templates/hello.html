@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <base th:href="${#request.getContextPath()}+'/'">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>hello,springboot</h1>
+<hr/>
+        <span th:text="${username}">张三</span>
+        <span th:text="|潘金莲,${username}|">张三</span>
+<hr/>
+username:<span th:text="${tUser.name}"></span><br/>
+password:<span th:text="${tUser.password}"></span>
+<hr/>
+<span th:if="${money>500}">土豪</span>
+<span th:text="${money>1000?'土豪':'土鳖'}"></span>
+<hr/>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>name</td>
+        <td>password</td>
+    </tr>
+
+    <tr th:each="user:${userList}">
+        <td th:text="${user.id}">ID</td>
+        <td th:text="${user.name}">name</td>
+        <td th:text="${user.password}">password</td>
+    </tr>
+</table>
+<hr/>
+<input th:value="${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}"/>
+<hr/>
+<span th:text="${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}"></span>
+<hr/>
+<form method="post" action="page/user">
+    账号:<input type="text" name="name"><br/>
+    密码:<input type="password" name="password"><br/>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

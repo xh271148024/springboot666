@@ -1,0 +1,3 @@
+resource:
+  imageServer: http://imagetest.qf.com
+  emailServer: http://emailtest.qf.com

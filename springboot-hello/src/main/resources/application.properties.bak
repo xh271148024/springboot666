@@ -1,0 +1,12 @@
+spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
+
+spring.jackson.time-zone=GMT+8
+
+spring.mvc.date-format=yyyy-MM-dd
+
+server.port=8008
+
+fileServer.path=http://file.qf.com
+
+resource.imageServer=http://image.qf.com
+resource.emailServer=http://email.qf.com
